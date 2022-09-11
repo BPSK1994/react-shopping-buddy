@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Header from './Header'
 import List from './List'
 
@@ -19,7 +19,7 @@ const App = function() {
     const[isEditing, setIsEditing] = React.useState(false)
     const[editId, setEditId] = React.useState(null)
 
-    useEffect(() => {
+    React.useEffect(() => {
         localStorage.setItem('list', JSON.stringify(list))
     }, [list])
 
@@ -111,117 +111,3 @@ const App = function() {
 }
 
 export default App
-
-
-//     const[itemsList, setItemsList] = React.useState([])
-
-//     const[inputData, setInputData]  = React.useState({input: ""})
-
-//     const [edit, setEdit] = React.useState(false)
-
- 
-//     const changeButtonText = function(id,input) {
-//         setEdit(!edit)
-//         setInputData({input: input})
-//         onEdit(id)
-        
-//         }
-
-    
-
-
-//     const onEdit = function(id) {
-//         console.log(id)
-//     }
-
-
-
-
-//     const handleChange = function(event) {
-//         const {name, value} = event.target
-//         return(
-//             setInputData(function(prevState) {
-//                 return ({
-//                     ...prevState, [name]:value
-//                 })
-//             })
-//         )
-//     }
-
-
-//     const handleSubmit = function(event) {
-//         event.preventDefault()
-//         addItem(inputData)
-//         return(
-//             setInputData(
-//                 {input: ""}
-//             )
-//         )
-//     }
-
-
-//     // Add Item
-    
-//     const addItem = function(inputData) {
-//         const id = Math.floor(Math.random() * 1000) + 1
-//         const newItem = {id, ...inputData}
-//         return(
-//             setItemsList(function(prevState) {
-//                 return([...prevState, newItem])
-//             })
-//         )
-//     }
-
-
-//     // Delete Item
-
-//     const deleteItem = function(id) {
-//         return(
-//             setItemsList(itemsList.filter(function(item) {
-//                     return(
-//                         item.id !== id
-//                     )
-//                 }))
-//             )
-//     }
-
-
-    
-
-
-//     return(
-//         <div className = "container">
-//             <section className = "content">
-//                 <Header title = {"Shopping Buddy"}
-//                 />
-
-//                 <form onSubmit = {handleSubmit}>
-//                     <div className = "form-control">
-//                         <input 
-//                             className = "form__input"
-//                             type = "text"
-//                             name = "input"
-//                             value = {inputData.input}
-//                             placeholder = "e.g. Milk"
-//                             onChange = {handleChange}
-//                             />
-//                         <button className = "form__btn"
-//                 type = "submit"
-//                 >{"Submit"}</button>
-//                     </div>
-//                 </form>
-
-//                {edit && <button className = "form__btn form__edit"
-//                         onClick = {onEdit}>{"Edit"}</button>}
-
-//                 <List itemsList = {itemsList}
-//                       onDelete = {deleteItem}
-//                       changeButtonText = {changeButtonText} 
-//                 />
-
-//             </section>  
-//         </div>
-//     )
-// }
-
-// export default App
