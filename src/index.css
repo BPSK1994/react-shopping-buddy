@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #dde1e7;
+    font-family: roboto;
+}
+
+
+.content {
+    width: 560px;
+    margin: 128px auto 0px auto;
+    background-color: #dde1e7;
+    padding: 32px;
+    border-radius: 5px;
+    box-shadow: -3px -3px 7px rgba(255,255,255,0.73), inset 3px 3px 5px rgba(94,104,121,0.288),
+    inset -3px -3px 7px rgba(255,255,255,0.73), 3px 3px 5px rgba(94,104,121,0.3);
+    border: 8px solid #dde1e7;
+    position: relative;
+}
+
+/* Heading */
+
+.heading {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 24px;
+}
+
+.heading i {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.form-control {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form__input {
+    width: 75%;
+    padding: 8px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: #dde1e7;
+    box-shadow: inset 3px 3px 5px  rgba(94,104,121,0.288), inset -3px -3px 7px rgba(255,255,255,0.73);
+}
+
+
+.form__btn {
+    width: 20%;
+    border-radius: 5px;
+    border: transparent;
+    background-color: #dde1e7;
+    box-shadow: -3px -3px 7px rgba(255,255,255,0.73), 3px 3px 5px rgba(94,104,121,0.3) ;
+    cursor: pointer;
+}
+
+.form__edit {
+    position: absolute;
+    left: 416px;
+    top: 89.1px;
+    width: 96px;
+    height: 32px;
+    
+}
+
+
+
+.item-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    font-family: roboto;
+    font-size: 14px;
+}
+
+.edit-btn {
+    border: transparent;
+    background-color: #dde1e7;
+    color: green;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dlt-btn {
+    border: transparent;
+    background-color: #dde1e7;
+    color: red;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.clr-btn {
+    display: block;
+    width: 20%;
+    height: 32px;
+    border-radius: 5px;
+    margin: 35px auto 10px auto;
+    background-color: orange;
+    border-color: transparent;
+    cursor: pointer;
+}
